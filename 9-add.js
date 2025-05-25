@@ -1,17 +1,16 @@
 const args = process.argv.slice(2);
-const a = Number(args[0]);
-const b = Number(args[1]);
 
-function add(a, b) {
+if (args.length === 0) {
+  console.log('no argument');
+} else if (args.length === 1) {
+  console.log('argument: ' + args[0]);
+} else {
+  const a = Number(args[0]);
+  const b = Number(args[1]);
+
   if (isNaN(a) || isNaN(b)) {
     console.log('Missing number');
   } else {
     console.log(a + b);
   }
-}
-
-if (args.length < 2) {
-  console.log('Missing number');
-} else {
-  add(a, b);
 }
