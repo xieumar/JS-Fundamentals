@@ -10,4 +10,8 @@ function add(a, b) {
   }
 }
 
-add(a, b);
+if (args.length < 2) {
+  console.log('Missing number');
+} else {
+  add(a, b);
+}
